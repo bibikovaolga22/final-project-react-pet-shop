@@ -1,0 +1,22 @@
+header {
+  display: flex;
+  padding: 40px 30px;
+  justify-content: space-between;
+  max-width: 1440px;
+  align-items: center;
+}
+.menu {
+  display: flex;
+  gap: 32px;
+  min-width: 461px;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu > li {
+  list-style: none;
+  font-weight: 500;
+}
+img .cart {
+  height: 48px;
+}

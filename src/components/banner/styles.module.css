@@ -1,0 +1,14 @@
+section {
+  max-width: 1440px;
+  background-image: url("../../assets/images/img.png");
+  padding: 80px 40px 200px 40px;
+  background-repeat: no-repeat;
+  margin-bottom: 80px;
+}
+
+.banner h1 {
+  font-size: 6rem;
+  color: #fff;
+  max-width: 990px;
+  margin-bottom: 40px;
+}
