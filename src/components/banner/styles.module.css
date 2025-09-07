@@ -1,4 +1,4 @@
-section {
+section.banner {
   max-width: 1440px;
   background-image: url("../../assets/images/img.png");
   padding: 80px 40px 200px 40px;

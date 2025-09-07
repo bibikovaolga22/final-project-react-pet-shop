@@ -1,0 +1,45 @@
+section.footer {
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 40px;
+}
+.footer h2 {
+  font-size: 64px;
+  margin-bottom: 40px;
+}
+.footer .mainContainer {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 2fr 1fr;
+  margin-bottom: 32px;
+}
+
+.footer .mainContainer > li {
+  background-color: #f1f3f4;
+  border-radius: 12px;
+  list-style: none;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer .mainContainer > li > span {
+  color: #8b8b8b;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.footer .mainContainer > li > p {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.social {
+  display: flex;
+  gap: 16px;
+}
+.social > li {
+  list-style: none;
+}
+.map {
+  border-radius: 12px;
+}
