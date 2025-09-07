@@ -1,6 +1,6 @@
 section.banner {
   max-width: 1440px;
-  background-image: url("../../assets/images/img.png");
+  background-image: url("../../../assets/images/img.png");
   padding: 80px 40px 200px 40px;
   background-repeat: no-repeat;
   margin-bottom: 80px;
@@ -11,4 +11,10 @@ section.banner {
   color: #fff;
   max-width: 990px;
   margin-bottom: 40px;
+}
+.ant-btn-primary {
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 6px;
+  background-color: aqua;
 }
