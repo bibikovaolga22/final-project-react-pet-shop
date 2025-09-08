@@ -1,0 +1,36 @@
+section.carousel {
+  max-width: 1440px;
+  padding-bottom: 70px;
+}
+section.carousel li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+section.carousel img {
+  width: 274px;
+  height: 350px;
+}
+section.carousel p {
+  font-size: 1.25rem;
+  text-align: center;
+}
+.title {
+  display: flex;
+  padding: 40px 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+.title h2 {
+  position: relative;
+}
+.title h2::after {
+  border-top: 1px solid #d9d9d9;
+  height: 1px;
+  top: 40px;
+  content: " ";
+  right: -700px;
+  width: 630px;
+  position: absolute;
+}

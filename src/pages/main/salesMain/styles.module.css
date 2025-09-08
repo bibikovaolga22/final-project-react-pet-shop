@@ -1,0 +1,21 @@
+section.salesMain {
+  max-width: 1440px;
+}
+.salesTitle {
+  display: flex;
+  padding: 40px 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+.salesTitle h2 {
+  position: relative;
+}
+.salesTitle h2::after {
+  border-top: 1px solid #d9d9d9;
+  height: 1px;
+  top: 40px;
+  content: " ";
+  left: 250px;
+  width: 854px;
+  position: absolute;
+}

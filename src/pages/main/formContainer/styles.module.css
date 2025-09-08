@@ -4,6 +4,7 @@ section.formContainer {
   flex-direction: column;
   background-color: #1e51d5;
   max-width: 1440px;
+  margin-bottom: 77px;
 }
 .formContainer h3 {
   font-size: 4rem;

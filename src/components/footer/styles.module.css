@@ -4,10 +4,7 @@ section.footer {
   flex-direction: column;
   padding: 0px 40px;
 }
-.footer h2 {
-  font-size: 64px;
-  margin-bottom: 40px;
-}
+
 .footer .mainContainer {
   display: grid;
   gap: 32px;

@@ -4,16 +4,16 @@ import wa from "../../assets/icons/whatsapp.svg";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 function Footer() {
-  const position = [48.1351, 11.582]; // London
+  const position = [48.1351, 11.582]; //Munich
   return (
     <section className={styles.footer}>
       <h2>Contact</h2>
       <ul className={styles.mainContainer}>
-        <li className={styles.flexOne}>
+        <li>
           <span>Phone</span>
           <p>+49 30 915-88492</p>
         </li>
-        <li className={styles.flexTwo}>
+        <li>
           <span>Socials</span>
           <ul className={styles.social}>
             <li>
@@ -25,13 +25,13 @@ function Footer() {
             </li>
           </ul>
         </li>
-        <li className={styles.flexThree}>
+        <li>
           {" "}
           <span>Address</span>
           <p>Wallstraẞe 9-13, 10179 Berlin, Deutschland</p>
         </li>
 
-        <li className={styles.flexFour}>
+        <li>
           {" "}
           <span>Working Hours</span>
           <p>24 hours a day</p>

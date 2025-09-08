@@ -7,14 +7,19 @@ function Header() {
     <header>
       <img src={Logo} alt="Logo" />
       <ul className={styles.menu}>
-        <Link to="/ "></Link>
-        <li>Main page</li>
-        <Link to="/categories "></Link>
-        <li>Categories</li>
-        <Link to="/products "></Link>
-        <li>All products</li>
-        <Link to="/sales"></Link>
-        <li>All sales</li>
+        <li>
+          {" "}
+          <Link to="/ ">Main page</Link>
+        </li>{" "}
+        <li>
+          <Link to="/categories">Categories</Link>
+        </li>
+        <li>
+          <Link to="/products ">All products</Link>
+        </li>{" "}
+        <li>
+          <Link to="/sales">All sales</Link>
+        </li>
       </ul>
       <img src={Cart} alt="cart" className={styles.cart} />
     </header>
