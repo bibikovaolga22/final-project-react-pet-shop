@@ -26,7 +26,6 @@ function Categories() {
             <img
               src={`http://localhost:3333${category.image}`}
               alt={category.title}
-              width={300}
             />
             <p>{category.title}</p>
           </li>

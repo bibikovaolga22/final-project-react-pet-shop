@@ -4,21 +4,28 @@ import axios from "axios";
 const BASE_URL = "http://localhost:3333/products";
 
 export const fetchProducts = createAsyncThunk(
-  "users/fetchProducts",
+  "categories/fetchProducts",
   async () => {
     const response = await axios.get(`${BASE_URL}/all`);
+
     return response.data;
   }
 );
 
 const initialState = {
-  data: [],
+  productsData: [],
   status: "idle",
   error: null,
 };
 
+function calculateDiscount(oldPrice, newPrice) {
+  if (!oldPrice || oldPrice <= 0) return 0;
+  const discount = ((oldPrice - newPrice) / oldPrice) * 100;
+  return Math.round(discount);
+}
+
 const productSlice = createSlice({
-  name: "categories",
+  name: "products",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
@@ -28,7 +35,11 @@ const productSlice = createSlice({
       })
       .addCase(fetchProducts.fulfilled, (state, action) => {
         state.status = "succeeded";
-        state.data = action.payload;
+        state.productsData = action.payload;
+        state.productsData = action.payload.map((product) => ({
+          ...product,
+          discount: calculateDiscount(product.price, product.discont_price),
+        }));
       })
       .addCase(fetchProducts.rejected, (state, action) => {
         state.status = "failed";

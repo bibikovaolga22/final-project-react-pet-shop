@@ -1,16 +1,16 @@
-.salesMain {
+.products {
   display: flex;
   flex-direction: column;
   max-width: 1440px;
-  padding: 0px 30px;
-  margin-bottom: 80px;
+  padding: 40px 30px;
 }
-.salesMain h2 {
+.products h2 {
   margin-bottom: 40px;
 }
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+
   column-gap: 32px;
   row-gap: 32px;
   justify-content: center;

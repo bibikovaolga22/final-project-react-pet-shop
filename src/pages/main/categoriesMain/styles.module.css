@@ -7,6 +7,7 @@ section.carousel li {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  cursor: pointer;
 }
 section.carousel img {
   width: 274px;

@@ -3,10 +3,10 @@ import axios from "axios";
 
 const BASE_URL = "http://localhost:3333/categories";
 
-export const fetchCategories = createAsyncThunk(
-  "categories/fetchCategories",
-  async () => {
-    const response = await axios.get(`${BASE_URL}/all`);
+export const fetchCategoryProducts = createAsyncThunk(
+  "categoryProducts/fetchCategoryProducts",
+  async (id) => {
+    const response = await axios.get(`${BASE_URL}/${id}`);
     return response.data;
   }
 );
@@ -17,23 +17,23 @@ const initialState = {
   error: null,
 };
 
-const categorySlice = createSlice({
-  name: "categories",
+const categoryProductsSlice = createSlice({
+  name: "categoryProducts",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchCategories.pending, (state) => {
+      .addCase(fetchCategoryProducts.pending, (state) => {
         state.status = "loading";
       })
-      .addCase(fetchCategories.fulfilled, (state, action) => {
+      .addCase(fetchCategoryProducts.fulfilled, (state, action) => {
         state.status = "succeeded";
         state.data = action.payload;
       })
-      .addCase(fetchCategories.rejected, (state, action) => {
+      .addCase(fetchCategoryProducts.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.error.message;
       });
   },
 });
-export default categorySlice.reducer;
+export default categoryProductsSlice.reducer;

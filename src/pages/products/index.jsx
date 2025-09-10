@@ -1,9 +1,9 @@
 import styles from "./styles.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts } from "../../../redux/slices/productSlice";
+import { fetchProducts } from "../../redux/slices/productSlice";
 import { useEffect } from "react";
 
-function SalesMain() {
+function Products() {
   const dispatch = useDispatch();
   const { productsData, status } = useSelector((state) => state.products);
 
@@ -16,15 +16,12 @@ function SalesMain() {
 
   if (status === "loading") return <p>Loading...</p>;
   if (status === "failed") return <p>Error loading categories</p>;
-  const filteredProducts = productsData.filter((product) => {
-    return product.discont_price != null;
-  });
-  console.log(filteredProducts);
+
   return (
-    <section className={styles.salesMain}>
-      <h2>Sales</h2>
+    <section className={styles.products}>
+      <h2>All products</h2>
       <ul className={styles.grid}>
-        {filteredProducts.slice(0, 4).map((product) => (
+        {productsData.map((product) => (
           <li key={product.id}>
             <img
               src={`http://localhost:3333${product.image}`}
@@ -50,4 +47,4 @@ function SalesMain() {
     </section>
   );
 }
-export default SalesMain;
+export default Products;

@@ -8,7 +8,7 @@ section.footer {
 .footer .mainContainer {
   display: grid;
   gap: 32px;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   margin-bottom: 32px;
 }
 
@@ -39,4 +39,5 @@ section.footer {
 }
 .map {
   border-radius: 12px;
+  margin-bottom: 80px;
 }

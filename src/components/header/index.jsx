@@ -15,7 +15,7 @@ function Header() {
           <Link to="/categories">Categories</Link>
         </li>
         <li>
-          <Link to="/products ">All products</Link>
+          <Link to="/products">All products</Link>
         </li>{" "}
         <li>
           <Link to="/sales">All sales</Link>

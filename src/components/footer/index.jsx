@@ -40,7 +40,12 @@ function Footer() {
       <MapContainer
         center={position}
         zoom={13}
-        style={{ height: "350px", width: "100%", borderRadius: "12px" }}
+        style={{
+          height: "350px",
+          width: "100%",
+          borderRadius: "12px",
+          marginBottom: "80px",
+        }}
       >
         <TileLayer
           url="https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=WluBRS9oOSAZh10Otpg1"

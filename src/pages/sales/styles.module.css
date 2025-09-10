@@ -1,11 +1,10 @@
-.salesMain {
+.sales {
   display: flex;
   flex-direction: column;
   max-width: 1440px;
-  padding: 0px 30px;
-  margin-bottom: 80px;
+  padding: 40px 30px;
 }
-.salesMain h2 {
+.sales h2 {
   margin-bottom: 40px;
 }
 .grid {
@@ -68,7 +67,7 @@
   margin-top: 14px;
   text-decoration: line-through;
 }
-.dicount {
+.discount {
   position: absolute;
   font-size: 1.25rem;
   color: #fff;

@@ -1,16 +1,16 @@
-.salesMain {
+.categoryProduct {
   display: flex;
   flex-direction: column;
   max-width: 1440px;
-  padding: 0px 30px;
-  margin-bottom: 80px;
+  padding: 40px 30px;
 }
-.salesMain h2 {
+.categoryProduct h2 {
   margin-bottom: 40px;
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); */
+  grid-template-columns: 270px 270px 270px 270px;
   column-gap: 32px;
   row-gap: 32px;
   justify-content: center;
@@ -46,6 +46,7 @@
   height: 284px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+  position: relative;
 }
 
 .price {
@@ -68,7 +69,7 @@
   margin-top: 14px;
   text-decoration: line-through;
 }
-.dicount {
+.discount {
   position: absolute;
   font-size: 1.25rem;
   color: #fff;
@@ -78,4 +79,28 @@
   border-radius: 6px;
   top: 16px;
   right: 16px;
+}
+.cardButton {
+  position: absolute;
+  top: 210px;
+  width: 246px;
+  height: 58px;
+  transform: translateX(-50%);
+  left: 50%;
+  pointer-events: none; /* prevent clicking while hidden */
+  transition: opacity 0.2s ease, transform 0.3s ease;
+  font-size: 1.25rem;
+  color: #fff;
+  font-weight: 600;
+  opacity: 0;
+  border: none;
+  border-radius: 6px;
+  background-color: #0d50ff;
+  cursor: pointer;
+}
+
+.grid li:hover .cardButton {
+  pointer-events: auto;
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
 }
