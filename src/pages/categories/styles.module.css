@@ -6,6 +6,7 @@
 }
 .categories h2 {
   margin-bottom: 40px;
+  margin-top: 40px;
 }
 .grid {
   display: grid;
@@ -24,6 +25,7 @@
   flex-direction: column;
   gap: 16px;
   text-align: center;
+  cursor: pointer;
   font-weight: 500;
 }
 .grid li img {

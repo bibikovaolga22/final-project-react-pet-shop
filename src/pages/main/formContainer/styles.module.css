@@ -1,5 +1,5 @@
 section.formContainer {
-  padding: 80px 40px 0px 40px;
+  padding: 0px 40px 0px 40px;
   display: flex;
   flex-direction: column;
   background-color: #1e51d5;
@@ -10,6 +10,7 @@ section.formContainer {
   font-size: 4rem;
   color: #fff;
   text-align: center;
+  padding-top: 32px;
 }
 .container {
   display: flex;

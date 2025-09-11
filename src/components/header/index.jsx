@@ -2,10 +2,19 @@ import Logo from "../../assets/icons/logo.svg";
 import Cart from "../../assets/icons/cart.svg";
 import styles from "./styles.module.css";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 function Header() {
+  const cartData = useSelector((state) => state.cart);
+  let totalQuantity = 0;
+  for (let [productId, quantity] of Object.entries(cartData)) {
+    totalQuantity += quantity;
+  }
   return (
     <header>
-      <img src={Logo} alt="Logo" />
+      <Link to="/ ">
+        <img src={Logo} alt="Logo" />
+      </Link>
       <ul className={styles.menu}>
         <li>
           {" "}
@@ -21,7 +30,11 @@ function Header() {
           <Link to="/sales">All sales</Link>
         </li>
       </ul>
-      <img src={Cart} alt="cart" className={styles.cart} />
+      <Link to="/cart ">
+        {" "}
+        <span>{totalQuantity}</span>
+        <img src={Cart} alt="cart" className={styles.cart} />
+      </Link>
     </header>
   );
 }

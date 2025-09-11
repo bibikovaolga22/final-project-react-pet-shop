@@ -5,9 +5,7 @@
   padding: 0px 30px;
   margin-bottom: 80px;
 }
-.salesMain h2 {
-  margin-bottom: 40px;
-}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
@@ -17,6 +15,7 @@
   max-width: 100%;
   align-items: center;
   overflow: hidden;
+  padding-top: 40px;
   align-self: center;
 }
 .grid li {

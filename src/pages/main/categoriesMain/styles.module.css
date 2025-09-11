@@ -1,6 +1,7 @@
 section.carousel {
   max-width: 1440px;
-  padding-bottom: 70px;
+  padding: 0px 30px;
+  margin-bottom: 109px;
 }
 section.carousel li {
   list-style: none;

@@ -2,6 +2,7 @@ import styles from "./styles.module.css";
 import { useEffect } from "react";
 import { fetchCategories } from "../../../redux/slices/categorySlice.js";
 import { useDispatch, useSelector } from "react-redux";
+import Title from "../../../components/title";
 import { Button } from "antd";
 import { useNavigate } from "react-router-dom";
 const contentStyle = {
@@ -30,11 +31,7 @@ function CategoriesMain() {
 
   return (
     <section className={styles.carousel}>
-      <div className={styles.title}>
-        <h2>Categories</h2>
-        <Button>All categories</Button>
-      </div>
-
+      <Title title="Categories" buttonText="All categories"></Title>
       <ul style={contentStyle}>
         {data?.slice(0, 4).map((category) => (
           <li key={category.id} onClick={() => handleCardClick(category)}>

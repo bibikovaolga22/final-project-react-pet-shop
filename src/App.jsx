@@ -10,7 +10,8 @@ import Categories from "./pages/categories";
 import Products from "./pages/products";
 import Sales from "./pages/sales";
 import CategoryProducts from "./pages/categoryProducts";
-import ProductDescription from "./components/productDescription";
+import ProductDescription from "./pages/productDescription";
+import Cart from "./pages/cart";
 function App() {
   return (
     <Router>
@@ -24,7 +25,6 @@ function App() {
               <CategoriesMain />
               <FormContainer />
               <SalesMain />
-              <ProductDescription />
             </>
           }
         />
@@ -32,6 +32,8 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/sales" element={<Sales />} />
         <Route path="/categories/:categoryId" element={<CategoryProducts />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/products/:productId" element={<ProductDescription />} />
       </Routes>
       <Footer />
     </Router>

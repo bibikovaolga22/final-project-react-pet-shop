@@ -6,6 +6,7 @@
 }
 .sales h2 {
   margin-bottom: 40px;
+  margin-top: 40px;
 }
 .grid {
   display: grid;
@@ -77,4 +78,28 @@
   border-radius: 6px;
   top: 16px;
   right: 16px;
+}
+.cardButton {
+  position: absolute;
+  top: 210px;
+  width: 246px;
+  height: 58px;
+  transform: translateX(-50%);
+  left: 50%;
+  pointer-events: none; /* prevent clicking while hidden */
+  transition: opacity 0.2s ease, transform 0.3s ease;
+  font-size: 1.25rem;
+  color: #fff;
+  font-weight: 600;
+  opacity: 0;
+  border: none;
+  border-radius: 6px;
+  background-color: #0d50ff;
+  cursor: pointer;
+}
+
+.grid li:hover .cardButton {
+  pointer-events: auto;
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
 }

@@ -6,10 +6,11 @@
 }
 .categoryProduct h2 {
   margin-bottom: 40px;
+  margin-top: 40px;
 }
 .grid {
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); */
+
   grid-template-columns: 270px 270px 270px 270px;
   column-gap: 32px;
   row-gap: 32px;

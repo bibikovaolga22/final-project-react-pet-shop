@@ -1,0 +1,18 @@
+section .sort {
+  margin-bottom: 40px;
+}
+
+.sort ul {
+  display: flex;
+  gap: 40px;
+}
+.sort ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.sort ul li p {
+  font-size: 1.25rem;
+  font-weight: 500;
+}

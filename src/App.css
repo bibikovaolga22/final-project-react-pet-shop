@@ -23,11 +23,12 @@
 
 h2 {
   font-size: 64px;
+  width: 70%;
 }
-/* Left and right arrows */
-.ant-carousel .slick-prev,
-.ant-carousel .slick-next {
-  font-size: 40px !important; /* arrow size */
-  color: #0d50ff !important; /* arrow color */
-  opacity: 1 !important; /* make sure visible */
+.ant-breadcrumb .ant-breadcrumb-separator {
+  margin-inline: 0px;
+}
+section,
+header {
+  margin: 0 auto;
 }

@@ -3,6 +3,7 @@ section.footer {
   display: flex;
   flex-direction: column;
   padding: 0px 40px;
+  gap: 40px;
 }
 
 .footer .mainContainer {

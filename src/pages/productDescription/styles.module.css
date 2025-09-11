@@ -1,11 +1,14 @@
 section.productsDescription {
   max-width: 1440px;
   display: flex;
-  justify-content: space-between;
-
-  flex-wrap: wrap; /* чтобы не вылазило на маленьких экранах */
+  flex-direction: column;
+  flex-wrap: wrap;
   padding: 40px 30px;
   gap: 32px;
+}
+.product_description_gallery {
+  display: flex;
+  justify-content: space-between;
 }
 section.productsDescription h4 {
   font-size: 2.5rem;
@@ -14,7 +17,6 @@ section.productsDescription h4 {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  width: 480px;
 }
 .itemPrice {
   display: flex;
@@ -55,6 +57,10 @@ section.productsDescription h4 {
 }
 .add_item {
   display: flex;
+  line-height: 3.5;
+}
+.mainContent {
+  padding: 0px 0px 0px 30px;
 }
 button.minus,
 button.plus {
@@ -65,6 +71,14 @@ button.plus {
   background-color: #fff;
   border-radius: 6px;
   cursor: pointer;
+}
+button.minus {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+button.plus {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 .readMore {
   font-size: 1rem;
@@ -80,6 +94,10 @@ button.plus {
   border: none;
   color: #ffffff;
   cursor: pointer;
+  font-weight: 500;
+}
+.add_to_cart_btn:hover {
+  background-color: black;
 }
 .add_item p {
   width: 96px;
@@ -90,11 +108,9 @@ button.plus {
 .gallery {
   display: flex;
   gap: 32px;
-  flex-shrink: 0; /* чтобы не сжималось */
-  max-width: 50%; /* половина контейнера */
+  flex-shrink: 0;
 }
-.mainContent {
-}
+
 .small {
   display: flex;
   flex-direction: column;
@@ -112,7 +128,7 @@ button.plus {
 }
 
 .gallery img.bigImg {
-  width: 460px;
+  width: 548px;
   height: 572px;
   border-radius: 12px;
 }

@@ -13,7 +13,7 @@ export const fetchProducts = createAsyncThunk(
 );
 
 const initialState = {
-  productsData: [],
+  productsData: {},
   status: "idle",
   error: null,
 };
@@ -35,11 +35,14 @@ const productSlice = createSlice({
       })
       .addCase(fetchProducts.fulfilled, (state, action) => {
         state.status = "succeeded";
-        state.productsData = action.payload;
-        state.productsData = action.payload.map((product) => ({
+        const productsArray = action.payload.map((product) => ({
           ...product,
           discount: calculateDiscount(product.price, product.discont_price),
         }));
+        state.productsData = {};
+        for (let product of productsArray) {
+          state.productsData[product.id] = product;
+        }
       })
       .addCase(fetchProducts.rejected, (state, action) => {
         state.status = "failed";

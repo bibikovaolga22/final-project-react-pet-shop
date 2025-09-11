@@ -1,0 +1,149 @@
+.cart_empty {
+  max-width: 1440px;
+  padding: 40px 30px;
+}
+.flex_container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 40px;
+}
+
+/* full cart */
+.cart_full {
+  display: flex;
+  gap: 32px;
+  padding: 40px 30px;
+}
+.cart_full li {
+  list-style: none;
+}
+.cart_image {
+  display: flex;
+  border-radius: 12px;
+  border: 1px solid grey;
+  width: 780px;
+}
+
+.form_container form {
+  display: flex;
+  flex-direction: column;
+}
+.cartImage {
+  width: 180px;
+  height: 200px;
+  border-radius: 15px;
+}
+.add_item {
+  display: flex;
+  line-height: 3.5;
+}
+button.minus,
+button.plus {
+  width: 58px;
+  height: 58px;
+  font-size: 1.5rem;
+  border: 1px solid #dddddd;
+  background-color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button.minus {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+button.plus {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.add_item p {
+  width: 96px;
+  height: 58px;
+  border: 1px solid #dddddd;
+  text-align: center;
+}
+.title {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.add_bottons {
+  padding-top: 32px;
+  padding-left: 32px;
+  padding-bottom: 32px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.discount_price {
+  display: flex;
+  padding-left: 10px;
+  padding-bottom: 32px;
+  align-items: end;
+  gap: 16px;
+}
+.discount_price h4 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1;
+}
+.discount_price span {
+  font-size: 1.25rem;
+  color: #8b8b8b;
+  text-decoration: line-through;
+  font-weight: 600;
+}
+.close {
+  display: flex;
+  padding-top: 32px;
+  padding-right: 32px;
+  cursor: pointer;
+  margin-left: 150px;
+}
+.close img {
+  width: 24px;
+  height: 24px;
+}
+.form_container {
+  padding: 32px;
+  width: 548px;
+  display: flex;
+  flex-direction: column;
+  background: #f1f3f4;
+}
+.form_container ul h4 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.form_container ul p {
+  font-size: 2.5rem;
+  color: #8b8b8b;
+}
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.total li:first-child {
+  font-size: 2.5rem;
+  color: #8b8b8b;
+}
+.total li:last-child {
+  font-size: 4rem;
+  font-weight: 700;
+}
+.form_container form {
+  width: 484px;
+  padding-top: 32px;
+}
+.form_container form input {
+  height: 58px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 1px solid #dddddd;
+  outline: none;
+}
+.itemsContainer {
+  display: flex;
+  gap: 32px;
+}

@@ -2,7 +2,7 @@ import styles from "./styles.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../../redux/slices/productSlice";
 import { useEffect } from "react";
-
+import Title from "../../../components/title";
 function SalesMain() {
   const dispatch = useDispatch();
   const { productsData, status } = useSelector((state) => state.products);
@@ -10,19 +10,21 @@ function SalesMain() {
   useEffect(() => {
     if (status === "idle") {
       dispatch(fetchProducts());
-      console.log("Categories data:", productsData);
     }
   }, [status, productsData, dispatch]);
 
   if (status === "loading") return <p>Loading...</p>;
   if (status === "failed") return <p>Error loading categories</p>;
-  const filteredProducts = productsData.filter((product) => {
-    return product.discont_price != null;
-  });
+  const filteredProducts = Object.entries(productsData)
+    .filter(([_id, product]) => {
+      return product.discont_price != null;
+    })
+    .map(([_id, product]) => product);
+
   console.log(filteredProducts);
   return (
     <section className={styles.salesMain}>
-      <h2>Sales</h2>
+      <Title title="Sales" buttonText="All sales"></Title>
       <ul className={styles.grid}>
         {filteredProducts.slice(0, 4).map((product) => (
           <li key={product.id}>

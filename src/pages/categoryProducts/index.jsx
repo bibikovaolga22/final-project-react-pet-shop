@@ -1,6 +1,8 @@
 import styles from "./styles.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Breadcrumb, Button } from "antd";
 import { useParams } from "react-router-dom";
 import { fetchCategoryProducts } from "../../redux/slices/categoryProductsSlice";
 
@@ -15,6 +17,54 @@ function CategoryProducts() {
   console.log(data);
   return (
     <section className={styles.categoryProduct}>
+      <Breadcrumb
+        separator={
+          <div
+            style={{
+              height: "1px",
+              width: "16px",
+              backgroundColor: "#DDDDDD",
+              marginInline: "-1px",
+              marginTop: "15px",
+            }}
+          />
+        }
+        items={[
+          {
+            title: (
+              <Link to="/">
+                <Button
+                  style={{
+                    color: "#8B8B8B",
+                    fontWeight: "500",
+                  }}
+                >
+                  Main page
+                </Button>
+              </Link>
+            ),
+          },
+          {
+            title: (
+              <Link to="/categories">
+                {" "}
+                <Button
+                  style={{
+                    color: "#8B8B8B",
+                    fontWeight: "500",
+                  }}
+                >
+                  Categories
+                </Button>
+              </Link>
+            ),
+          },
+
+          {
+            title: <Button>Dry & Wet Food</Button>,
+          },
+        ]}
+      />
       <h2>{data.category?.title} </h2>
       <ul className={styles.grid}>
         {data.data?.map((product) => (
