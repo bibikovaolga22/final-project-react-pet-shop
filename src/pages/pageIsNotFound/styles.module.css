@@ -1,0 +1,29 @@
+.image_container {
+  display: flex;
+}
+.main_content {
+  padding: 80px 370px;
+}
+.page_not_found {
+  display: flex;
+  justify-content: center;
+}
+.main_content ul li {
+  list-style: none;
+}
+.text_container {
+  display: flex;
+  flex-direction: column;
+  max-width: 664px;
+  text-align: center;
+  padding-top: 32px;
+}
+.text_container h4 {
+  font-size: 4rem;
+}
+.text_container p {
+  font-size: 1.25rem;
+  color: #8b8b8b;
+  padding-top: 16px;
+  margin-bottom: 32px;
+}

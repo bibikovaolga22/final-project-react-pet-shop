@@ -25,3 +25,20 @@ header {
 img .cart {
   height: 48px;
 }
+.menu > li a:last-child {
+  position: relative;
+}
+.badge {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-color: #0d50ff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  top: 55px;
+}

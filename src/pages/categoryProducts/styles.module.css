@@ -10,15 +10,12 @@
 }
 .grid {
   display: grid;
-
   grid-template-columns: 270px 270px 270px 270px;
   column-gap: 32px;
   row-gap: 32px;
-  justify-content: center;
   max-width: 100%;
   align-items: center;
   overflow: hidden;
-  align-self: center;
 }
 .grid li {
   list-style: none;
@@ -88,7 +85,7 @@
   height: 58px;
   transform: translateX(-50%);
   left: 50%;
-  pointer-events: none; /* prevent clicking while hidden */
+  pointer-events: none;
   transition: opacity 0.2s ease, transform 0.3s ease;
   font-size: 1.25rem;
   color: #fff;

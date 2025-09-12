@@ -12,7 +12,7 @@ function Header() {
   }
   return (
     <header>
-      <Link to="/ ">
+      <Link to="/pageIsNotFound ">
         <img src={Logo} alt="Logo" />
       </Link>
       <ul className={styles.menu}>
@@ -32,7 +32,7 @@ function Header() {
       </ul>
       <Link to="/cart ">
         {" "}
-        <span>{totalQuantity}</span>
+        <span className={styles.badge}>{totalQuantity}</span>
         <img src={Cart} alt="cart" className={styles.cart} />
       </Link>
     </header>

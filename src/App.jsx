@@ -12,6 +12,8 @@ import Sales from "./pages/sales";
 import CategoryProducts from "./pages/categoryProducts";
 import ProductDescription from "./pages/productDescription";
 import Cart from "./pages/cart";
+import PageIsNotFound from "./pages/pageIsNotFound";
+
 function App() {
   return (
     <Router>
@@ -34,6 +36,7 @@ function App() {
         <Route path="/categories/:categoryId" element={<CategoryProducts />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/products/:productId" element={<ProductDescription />} />
+        <Route path="/PageIsNotFound" element={<PageIsNotFound />} />
       </Routes>
       <Footer />
     </Router>

@@ -13,6 +13,7 @@
 .cart_full {
   display: flex;
   gap: 32px;
+  max-width: 1440px;
   padding: 40px 30px;
 }
 .cart_full li {
@@ -30,8 +31,8 @@
   flex-direction: column;
 }
 .cartImage {
-  width: 180px;
-  height: 200px;
+  width: 200px;
+  height: 180px;
   border-radius: 15px;
 }
 .add_item {
@@ -78,7 +79,6 @@ button.plus {
 .discount_price {
   display: flex;
   padding-left: 10px;
-  padding-bottom: 32px;
   align-items: end;
   gap: 16px;
 }
@@ -145,5 +145,14 @@ button.plus {
 }
 .itemsContainer {
   display: flex;
+  flex-direction: column;
   gap: 32px;
+}
+.buttons_and_price {
+  display: flex;
+  gap: 32px;
+}
+.description_title {
+  display: flex;
+  gap: 16px;
 }
